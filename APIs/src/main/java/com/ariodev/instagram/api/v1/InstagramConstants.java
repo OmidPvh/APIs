@@ -7,8 +7,6 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
-import com.ariodev.instagram.api.v1.Instagram;
-
 import static android.os.Build.MANUFACTURER;
 
 

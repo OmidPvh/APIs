@@ -96,7 +96,7 @@ public class Instagram implements Serializable
 
     @Getter
     @Setter
-    private long userId;
+    private long userID;
 
     @Getter
     @Setter
@@ -135,13 +135,13 @@ public class Instagram implements Serializable
     }
 
     @Builder
-    public Instagram(Context context, String username, String password, long userId, String uuid, HashMap<String, Cookie> cookieStore)
+    public Instagram(Context context, String username, String password, long userID, String uuid, HashMap<String, Cookie> cookieStore)
     {
         super();
         Instagram.username = username;
         Instagram.password = password;
         Instagram.context = context;
-        this.userId = userId;
+        this.userID = userID;
         this.uuid = uuid;
         this.cookieStore = cookieStore;
         this.isLoggedIn = true;
@@ -344,9 +344,9 @@ public class Instagram implements Serializable
         if (loginResult.getStatus()
                        .equalsIgnoreCase("ok"))
         {
-            this.userId = loginResult.getLogged_in_user()
+            this.userID = loginResult.getLogged_in_user()
                                      .getPk();
-            this.rankToken = this.userId + "_" + this.uuid;
+            this.rankToken = this.userID + "_" + this.uuid;
             this.isLoggedIn = true;
 
             this.sendRequest(new InstagramSyncFeaturesRequest(false));
