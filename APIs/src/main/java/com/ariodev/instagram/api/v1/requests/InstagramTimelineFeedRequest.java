@@ -24,7 +24,6 @@ import okhttp3.Response;
  * Created by root on 09/06/17.
  */
 
-@NoArgsConstructor
 @AllArgsConstructor
 public class InstagramTimelineFeedRequest extends InstagramRequest<InstagramTimelineFeedResult>
 {
