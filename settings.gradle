@@ -1,0 +1,3 @@
+include ':APIs'
+include ':app'
+rootProject.name = "Instagram APIs"
