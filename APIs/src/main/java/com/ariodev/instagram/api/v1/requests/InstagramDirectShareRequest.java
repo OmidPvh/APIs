@@ -4,7 +4,7 @@ import android.text.TextUtils;
 
 import com.ariodev.instagram.api.v1.util.InstagramConstants;
 import com.ariodev.instagram.api.v1.requests.payload.StatusResult;
-import com.ariodev.instagram.api.v1.util.InstagramConstants;
+
 import com.ariodev.instagram.api.v1.util.InstagramGenericUtil;
 
 import java.io.IOException;

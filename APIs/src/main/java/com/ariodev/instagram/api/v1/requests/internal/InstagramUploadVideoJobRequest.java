@@ -2,9 +2,9 @@ package com.ariodev.instagram.api.v1.requests.internal;
 
 import android.util.Log;
 
-import com.ariodev.instagram.api.v1.util.InstagramConstants;
 import com.ariodev.instagram.api.v1.requests.InstagramRequest;
 import com.ariodev.instagram.api.v1.requests.payload.StatusResult;
+import com.ariodev.instagram.api.v1.util.InstagramConstants;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,7 +43,6 @@ public class InstagramUploadVideoJobRequest extends InstagramRequest<StatusResul
 
     private Request createHTTPRequest()
     {
-
         return (new okhttp3.Request.Builder()).url(this.getUrl())
                                               .addHeader("X-IG-Capabilities", "3Q4=")
                                               .addHeader("X-IG-Connection-Type", "WIFI")

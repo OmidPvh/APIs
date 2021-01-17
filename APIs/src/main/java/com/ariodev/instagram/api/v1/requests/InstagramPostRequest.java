@@ -1,8 +1,6 @@
 package com.ariodev.instagram.api.v1.requests;
 
-import android.util.Log;
-
-import com.ariodev.instagram.api.v1.InstagramConstants;
+import com.ariodev.instagram.api.v1.util.InstagramConstants;
 import com.ariodev.instagram.api.v1.util.InstagramHashUtil;
 
 import java.io.IOException;

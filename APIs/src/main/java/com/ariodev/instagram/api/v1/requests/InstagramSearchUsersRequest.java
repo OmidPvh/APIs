@@ -1,7 +1,7 @@
 package com.ariodev.instagram.api.v1.requests;
 
-import com.ariodev.instagram.api.v1.InstagramConstants;
 import com.ariodev.instagram.api.v1.requests.payload.InstagramSearchUsersResult;
+import com.ariodev.instagram.api.v1.util.InstagramConstants;
 
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;

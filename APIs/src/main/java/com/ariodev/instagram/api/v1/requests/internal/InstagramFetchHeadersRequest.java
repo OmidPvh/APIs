@@ -1,5 +1,7 @@
 package com.ariodev.instagram.api.v1.requests.internal;
 
+
+
 import com.ariodev.instagram.api.v1.requests.InstagramGetRequest;
 import com.ariodev.instagram.api.v1.requests.payload.StatusResult;
 import com.ariodev.instagram.api.v1.util.InstagramGenericUtil;

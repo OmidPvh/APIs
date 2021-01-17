@@ -1,6 +1,6 @@
 package com.ariodev.instagram.api.v1.requests;
 
-import com.ariodev.instagram.api.v1.InstagramConstants;
+import com.ariodev.instagram.api.v1.util.InstagramConstants;
 
 import java.io.IOException;
 
@@ -11,31 +11,36 @@ import okhttp3.Response;
  * Created by root on 08/06/17.
  */
 
-public abstract class InstagramGetRequest<T> extends InstagramRequest<T> {
+public abstract class InstagramGetRequest<T> extends InstagramRequest<T>
+{
 
     @Override
-    public String getMethod() {
+    public String getMethod()
+    {
         return "GET";
     }
 
     @Override
-    public T execute() throws IOException {
+    public T execute() throws IOException
+    {
 
-        Request request = new Request.Builder()
-                .url(InstagramConstants.API_URL + getUrl())
-                .addHeader("Connection", "close")
-                .addHeader("Accept", "*/*")
-                .addHeader("Cookie2", "$Version=1")
-                .addHeader("Accept-Language", "en-US")
-                .addHeader("User-Agent", InstagramConstants.getUserAgent())
-                .build();
+        Request request = new Request.Builder().url(InstagramConstants.API_URL + getUrl())
+                                               .addHeader("Connection", "close")
+                                               .addHeader("Accept", "*/*")
+                                               .addHeader("Cookie2", "$Version=1")
+                                               .addHeader("Accept-Language", "en-US")
+                                               .addHeader("User-Agent", InstagramConstants.getUserAgent())
+                                               .build();
 
-        Response response = api.getClient().newCall(request).execute();
+        Response response = api.getClient()
+                               .newCall(request)
+                               .execute();
         api.setLastResponse(response);
 
         int resultCode = response.code();
-        String content = response.body().string();
-//        Log.d("GET", "Code: " + resultCode);
+        String content = response.body()
+                                 .string();
+        //        Log.d("GET", "Code: " + resultCode);
 
         return parseResult(resultCode, content);
 

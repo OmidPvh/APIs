@@ -1,13 +1,9 @@
 package com.ariodev.instagram.api.v1.util;
 
-import com.ariodev.instagram.api.v1.InstagramConstants;
-
 import org.apache.commons.codec.binary.Hex;
 
 import java.net.URLEncoder;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.security.Key;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

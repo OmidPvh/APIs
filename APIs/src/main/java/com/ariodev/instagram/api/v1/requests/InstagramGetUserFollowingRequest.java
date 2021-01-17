@@ -1,10 +1,9 @@
 package com.ariodev.instagram.api.v1.requests;
 
-import com.ariodev.instagram.api.v1.InstagramConstants;
 import com.ariodev.instagram.api.v1.requests.payload.InstagramGetUserFollowersResult;
+import com.ariodev.instagram.api.v1.util.InstagramConstants;
 
 import lombok.AllArgsConstructor;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
 /**
@@ -13,23 +12,27 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @AllArgsConstructor
-public class InstagramGetUserFollowingRequest extends InstagramGetRequest<InstagramGetUserFollowersResult> {
+public class InstagramGetUserFollowingRequest extends InstagramGetRequest<InstagramGetUserFollowersResult>
+{
 
 
     private long userId;
     private String maxId;
 
     @Override
-    public String getUrl() {
+    public String getUrl()
+    {
         String baseUrl = "friendships/" + userId + "/following/?rank_token=" + api.getRankToken() + "&ig_sig_key_version=" + InstagramConstants.API_KEY_VERSION;
-        if (maxId != null && !maxId.isEmpty()) {
+        if (maxId != null && !maxId.isEmpty())
+        {
             baseUrl += "&max_id=" + maxId;
         }
         return baseUrl;
     }
 
     @Override
-    public InstagramGetUserFollowersResult parseResult(int resultCode, String content) {
+    public InstagramGetUserFollowersResult parseResult(int resultCode, String content)
+    {
         return parseJson(resultCode, content, InstagramGetUserFollowersResult.class);
     }
 }
