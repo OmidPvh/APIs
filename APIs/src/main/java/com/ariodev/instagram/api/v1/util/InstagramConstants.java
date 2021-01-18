@@ -54,7 +54,7 @@ public class InstagramConstants
         String strDevice = Build.DEVICE;
         String strBoard = Build.BOARD;
 
-        String realUserAgent = String.format("Instagram 170.2.0.30.474 Android (%s/%s; %sdpi; %sx%s; %s; %s; %s; %s; en_US)", Build.VERSION.SDK_INT, Build.VERSION.RELEASE, densityDpi, widthPixels, heightPixels, MANUFACTURER, strModel, strDevice, strBoard);
+        String realUserAgent = String.format("Instagram 103.1.0.15.119 Android (%s/%s; %sdpi; %sx%s; %s; %s; %s; %s; en_US)", Build.VERSION.SDK_INT, Build.VERSION.RELEASE, densityDpi, widthPixels, heightPixels, MANUFACTURER, strModel, strDevice, strBoard);
 
 
         if (strModel == null || strModel.isEmpty() || strManufacturer == null || strManufacturer.isEmpty() || Build.VERSION.RELEASE == null || strDevice.isEmpty() || strBoard == null || strBoard.isEmpty() || realUserAgent.contains("unknown"))
