@@ -23,5 +23,3 @@
 
 -keep class okhttp3.internal.publicsuffix.PublicSuffixDatabase
 -keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
--keep class okhttp3.* { *; }
--keep class okhttp3.*
